@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabe=no">
+    <title>Server Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>Orange Pi Stats</h1>
+                <p class="suptitle">Панель мониторинга и управления</p>
+            </div>
+            <div class="status">
+                <div class="status-dot"></div>
+                <span>Online</span>
+            </div>
+        </header>
+        <div class="grid">
+            <!--cpu card-->
+            <div class="card">
+                <div class="card-title">Процессор (CPU)</div>
+                <div class="card-value" id="cpu-val">--%</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="cpu-bar" style="width: 0%"></div>
+                </div>
+            </div>
+            <!--ram card-->
+            <div class="card">
+                <div class="card-title">Оперативная память (RAM)</div>
+                <div class="card-value" id="ram-val">--%</div>
+                <div class="progress-bg">
+                    <div class="progress-fill" id="ram-bar" style="width: 0%"></div>
+                </div>
+            </div>
+            <!--temp card-->
+            <div class="card">
+                <div class="card-title">Температура</div>
+                <div class="card-value" id="temp-val">--C</div>
+                <div class="card-desc">Критическая: 85С</div>
+            </div>
+            <!--disc card-->
+            <div class="card">
+                <div class="card-title">Память</div>
+                <div class="card-value" id="disk-val">--%</div>
+                <div class="card-desc">Свободно: <span id="disk-free">--</span>GB</div>
+            </div>
+        </div>
+        <div class="actions">
+            <h2>Быстрые действия</h2>
+            <div class="buttons">
+                <button class="btn btn-primary" id="btn-jellyfin">Открыть Jellyfin</button>
+                <button class="btn btn-danger" id="btn-restart">Перезагрузить Сервер</button>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="script.js"></script>
+</body>
+</html>
